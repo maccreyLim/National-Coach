@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:national_coach_app/Controller/theme_controller.dart';
-import 'package:national_coach_app/Screen/home_screen.dart';
+import 'Screen/door_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // 여기에 다른 초기화 코드를 추가할 수 있습니다.
   runApp(MyApp());
 }
 
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
               theme: themeController.isDarkMode.value
                   ? ThemeData.dark()
                   : ThemeData.light(),
-              home: const HomeScreen(),
+              home: const DoorScreen(),
             ));
   }
 }
